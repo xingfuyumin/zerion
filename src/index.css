@@ -1,4 +1,3 @@
-html {
-  --test: red;
-  color: var(--test);
+html, body, #root, .zerion-layout {
+  height: 100%;
 }
