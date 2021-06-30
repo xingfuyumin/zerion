@@ -1,14 +1,14 @@
 import React from 'react';
 import './Header.less';
 import { NavBar } from 'antd-mobile';
-import Icon from '../icon/Icon';
 import Search from '../search/Search';
+import PageDrawer from '../drawer/PageDrawer';
 
 const Header = (props) => {
   return (
     <div className="zerion-header">
       <NavBar
-        leftContent={<Icon size={32} type="setting" />}
+        leftContent={<PageDrawer />}
         rightContent={<Search />}
       />
     </div>

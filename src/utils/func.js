@@ -21,3 +21,10 @@ export const getLocal = (name, defaultVal) => {
 export const setLocal = (name, val) => {
     window.localStorage.setItem(name, JSON.stringify(val));
 };
+
+/**
+ * 多语言翻译函数
+ */
+export const labelTran = (id) => {
+    return id;
+}

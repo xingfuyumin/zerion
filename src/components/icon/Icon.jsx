@@ -11,11 +11,11 @@ import './Icon.less';
  */
 const Icon = (props) => {
   const {
-    size = 24, type,
+    size = 24, type, onClick, active, viewBox,
   } = props;
   return (
-    <span className="zerion-icon">
-      <svg width={String(size)} height={String(size)}>
+    <span className={`zerion-icon${active ? ' zerion-active-icon' : ''}`} onClick={onClick}>
+      <svg width={String(size)} height={String(size)} viewBox={viewBox}>
         {
           icons[type].map((item, index) => {
             if (item.shape === 'path') {

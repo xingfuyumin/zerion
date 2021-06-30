@@ -1,0 +1,66 @@
+.zerion-page-drawer {
+  .am-drawer-sidebar {
+    width: 180px;
+    overflow: auto;
+    // border-right: 1px solid var(--text-color);
+    background-color: var(--drawer-background-color);
+    color: var(--text-color);
+    padding: 24px 12px 24px 20px;
+  }
+
+  .zerion-walletinfo {
+    display: flex;
+    padding-bottom: 24px;
+  }
+
+  .zerion-walletinfo-avatar {
+    height: 40px;
+    line-height: 40px;
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 18px;
+    }
+  }
+
+  .zerion-walletinfo-data {
+    flex: 1 1;
+    margin-left: 8px;
+    .zerion-walletinfo-id {
+      font-size: 14px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      height: 20px;
+      line-height: 20px;
+    }
+    .zerion-walletinfo-moneny {
+      font-size: 16px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      height: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .zerion-drawer-listitem {
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    span:last-child {
+      margin-left: 12px;
+      vertical-align: super;
+    }
+  }
+
+  .zerion-drawer-active-listitem {
+    color: var(--active-color);
+  }
+
+  .zerion-drawer-splitline {
+    height: 12px;
+    border-bottom: 1px solid var(--text-color);
+    margin: 0 -12px 12px -20px;
+  }
+}
