@@ -1,6 +1,6 @@
 import React from 'react';
-import { useMemo } from 'react';
 import icons from './icons';
+import './Icon.less';
 
 /**
  * 自定义图标
@@ -14,13 +14,21 @@ const Icon = (props) => {
     size = 24, type,
   } = props;
   return (
-    <svg width={String(size)} height={String(size)} style="fill: var(--text-color)">
-      {
-        icons[type].map(item => (
-          <path d={item}></path>
-        ))
-      }
-    </svg>
+    <span className="zerion-icon">
+      <svg width={String(size)} height={String(size)}>
+        {
+          icons[type].map((item, index) => {
+            if (item.shape === 'path') {
+              return (<path d={item.d} key={String(index)} style={item.style}></path>);
+            }
+            if (item.shape === 'circle') {
+              return (<circle cx={item.cx} cy={item.cy} r={item.r} key={String(index)} style={item.style}></circle>);
+            }
+            return <></>;
+          })
+        }
+      </svg>
+    </span>
   );
 }
 export default Icon;

@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Route, Redirect } from 'react-router-dom';
-import Header from './components/nav/Header';
+import Header from '../components/nav/Header';
+import './App.less';
 
 const App = () => {
   useEffect(() => {
 
   }, []);
   return (
-    <div className="zerion-layout" style={{ '--background-color': 'black', '--text-color': 'white', backgroundColor: 'var(--background-color)', color: 'var(--text-color)' }}>
+    <div className="zerion-layout">
       <Header />
       <div className="zerion-content">
         <Router>
