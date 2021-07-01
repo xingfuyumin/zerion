@@ -1,0 +1,33 @@
+.zerion-linechart {
+  height: 306px;
+  border-radius: 12px;
+  border: 1px solid var(--text-color);
+
+  & > div:first-child {
+    height: 20px;
+    padding: 16px;
+  }
+  #zerion-linechart-container {
+    height: 200px;
+  }
+  & > div:last-child {
+    height: 22px;
+    line-height: 22px;
+    padding: 16px;
+    display: flex;
+
+    & > div {
+      flex: 1 1;
+      text-align: center;
+      span {
+        border-radius: 20px;
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+      }
+      .active {
+        background-color: #00ff00;
+      }
+    }
+  }
+}

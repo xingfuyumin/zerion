@@ -24,6 +24,9 @@ const Icon = (props) => {
             if (item.shape === 'circle') {
               return (<circle cx={item.cx} cy={item.cy} r={item.r} key={String(index)} style={item.style}></circle>);
             }
+            if (item.shape === 'rect') {
+              return (<rect key={String(index)} style={item.style} transform={item.transform}></rect>);
+            }
             return <></>;
           })
         }

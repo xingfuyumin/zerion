@@ -1,0 +1,48 @@
+.zerion-overview {
+  padding: 15px;
+  .zerion-total-block {
+    display: flex;
+    & > div:first-child {
+      flex: 1 1;
+      & > div:first-child {
+        & > span:first-child {
+          font-size: 36px;
+          color: var(--text-color);
+          font-weight: 600;
+          height: 44px;
+          line-height: 44px;
+        }
+        & > span:last-child {
+          margin-left: 5px;
+          vertical-align: super;
+        }
+      }
+      & > div:last-child {
+        font-size: 20px;
+        color: #00ff00;
+        font-weight: 500;
+        height: 24px;
+        line-height: 24px;
+      }
+    }
+    & > div:last-child {
+      width: 132px;
+      height: 36px;
+      border-radius: 36px;
+      background-color: var(--active-color);
+      color: '#ffffff';
+      line-height: 32px;
+      text-align: center;
+      margin-top: 16px;
+      & > span:first-child {
+        vertical-align: text-top;
+        display: inline-block;
+      }
+      & > span:last-child {
+        // vertical-align: middle;
+        vertical-align: revert;
+        margin-left: 5px;
+      }
+    }
+  }
+}

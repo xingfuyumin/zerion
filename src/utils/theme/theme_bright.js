@@ -1,7 +1,7 @@
 const theme_bright = {
-    '--background-color': '#ffffff',
+    '--bg-color': '#ffffff',
     '--text-color': '#000000',
-    '--titlebar-background-color': '#fafafa',
+    '--titlebar-bg-color': '#fafafa',
     '--active-color': '#3a90f0',
 };
 export default theme_bright;
