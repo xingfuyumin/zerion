@@ -1,0 +1,51 @@
+.zerion-pledgedassets {
+  border-radius: 12px;
+  border: 1px solid var(--text-color);
+  margin-top: 20px;
+  & > div:first-child {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+  & > div:nth-child(2) {
+    padding: 6px 16px 0 16px;
+    font-size: 14px;
+  }
+  & > div:nth-child(3) {
+    padding: 6px 16px 0 16px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  & > div:nth-child(4) {
+    padding: 0 16px 0 16px;
+    margin-top: 16px;
+    & > div {
+      margin-top: 10px;
+      & > div:first-child {
+        font-size: 12px;
+      }
+      & > div:last-child {
+        margin: 10px 0;
+        & > div {
+          display: flex;
+          height: 32px;
+          margin-top: 10px;
+          img {
+            height: 32px;
+            width: 32px;
+          }
+          & > div:nth-child(2) {
+            margin-left: 4px;
+            flex: 1 1;
+            text-align: left;
+            line-height: 32px;
+          }
+          & > div:nth-child(3) {
+            flex: 1 1;
+            text-align: right;
+            line-height: 32px;
+          }
+        }
+      }
+    }
+  }
+}

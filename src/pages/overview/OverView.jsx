@@ -3,6 +3,9 @@ import { withRouter } from 'react-router';
 import Icon from '../../components/icon/Icon';
 import './OverView.less';
 import MoneyLineChart from '../../components/chart/MoneyLineChart';
+import AllAssets from './AllAssets';
+import PledgedAssets from './PledgedAssets';
+import PolygonChain from './PolygonChain';
 
 const OverView = (props) => {
   return (
@@ -21,6 +24,9 @@ const OverView = (props) => {
         </div>
       </div>
       <MoneyLineChart />
+      <AllAssets />
+      <PledgedAssets />
+      <PolygonChain />
     </div>
   );
 };

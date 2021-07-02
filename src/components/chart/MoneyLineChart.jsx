@@ -39,7 +39,6 @@ const initChart = (setType, type, ref, setLoading) => {
   chart.axis(false);
   chart.tooltip({
     title: (title, datum) => {
-      console.log(title, datum);
       return datum['value'];
     },
     crosshairs: {
@@ -65,7 +64,7 @@ const MoneyLineChart = () => {
       <div>
         {
           Object.keys(types).map(key => (
-            <div>
+            <div key={key}>
               <span className={key === type ? 'active' : ''} onClick={changeType(setType, key, ref, setLoading)}>
                 {types[key]}
               </span>

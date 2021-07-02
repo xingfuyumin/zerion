@@ -95,12 +95,12 @@
     add: [
         {
             shape: 'rect',
-            style: { x: '6', y: '13', width: '2', height: '12', rx: '1' },
+            style: { x: '0', y: '13', width: '2', height: '12', rx: '1' },
             transform: "rotate(-90 6 13)"
         },
         {
             shape: 'rect',
-            style: { x: '11', y: '6', width: '2', height: '12', rx: '1' },
+            style: { x: '11', y: '12', width: '2', height: '12', rx: '1' },
         },
     ],
     xxx: [
