@@ -3,6 +3,7 @@ import { withRouter } from 'react-router';
 import './Home.less';
 import Header from '../../components/nav/Header';
 import OverView from '../overview/OverView';
+import History from '../history/History';
 
 const Home = (props) => {
   const { match: { params: { id, pagekey } } } = props;
@@ -13,6 +14,10 @@ const Home = (props) => {
         {
           pagekey === 'overview' &&
           <OverView />
+        }
+        {
+          pagekey === 'history' &&
+          <History />
         }
       </div>
     </div>

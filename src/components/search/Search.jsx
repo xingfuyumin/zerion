@@ -18,7 +18,7 @@ const Search = () => {
   const [visible, setVisible] = useState(false);
   return (
     <span>
-      <Icon type="search" onClick={onModelVisibleChange(setVisible, true)}/>
+      <Icon type="icon-baseline-search-px" onClick={onModelVisibleChange(setVisible, true)}/>
       <Modal
         visible={visible}
         animationType="slide-down"

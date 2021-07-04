@@ -1,6 +1,19 @@
-import React from 'react';
-import icons from './icons';
+import React, { useMemo } from 'react';
 import './Icon.less';
+
+import { createFromIconfontCN } from '@ant-design/icons';
+
+const IconFont = createFromIconfontCN({
+  scriptUrl: [
+    /*  
+    icon-right  icon-eye  icon-touzilicai icon-piechart icon-zhuti icon-Forbidden
+    icon-baseline-menu-px  icon-baseline-search-px  icon-copy  icon-fenxiang
+    icon-down  icon-yuyan  icon-lishi  icon-direction_up_down  icon-plus  icon-swap
+    icon-right1  icon-right2  icon-fl-baobiao
+    */
+    '//at.alicdn.com/t/font_2649738_1nsjoi0pf7w.js',
+  ],
+});
 
 /**
  * 自定义图标
@@ -14,24 +27,12 @@ const Icon = (props) => {
     size = 24, type, onClick, active, viewBox,
   } = props;
   return (
-    <span className={`zerion-icon${active ? ' zerion-active-icon' : ''}`} onClick={onClick}>
-      <svg width={String(size)} height={String(size)} viewBox={viewBox}>
-        {
-          icons[type].map((item, index) => {
-            if (item.shape === 'path') {
-              return (<path d={item.d} key={String(index)} style={item.style}></path>);
-            }
-            if (item.shape === 'circle') {
-              return (<circle cx={item.cx} cy={item.cy} r={item.r} key={String(index)} style={item.style}></circle>);
-            }
-            if (item.shape === 'rect') {
-              return (<rect key={String(index)} style={item.style} transform={item.transform}></rect>);
-            }
-            return <></>;
-          })
-        }
-      </svg>
-    </span>
+    <IconFont
+      style={{ fontSize: size }}
+      type={type}
+      className={`zerion-icon${active ? ' zerion-active-icon' : ''}`}
+      onClick={onClick}
+    />
   );
 }
 export default Icon;

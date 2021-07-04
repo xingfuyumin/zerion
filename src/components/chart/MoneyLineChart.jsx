@@ -35,16 +35,30 @@ const initChart = (setType, type, ref, setLoading) => {
       type: 'quantize',
     },
   });
-  chart.line().position('date*momey').color('#00ff00');;
+  chart.line().position('date*momey').tooltip('date*momey', (date, momey) => ({ date, momey }));
   chart.axis(false);
   chart.tooltip({
-    title: (title, datum) => {
-      return datum['value'];
-    },
+    showTitle: false,
+    itemTpl: '<li class="test-xmzhou"><div>US&emsp;${momey}</div><div>{date}</div></li>',
     crosshairs: {
       type: 'xy',
+      line: {
+        style: {
+          lineDash: [4,4,4]
+        }
+      }
     },
     showCrosshairs: true,
+  });
+  chart.annotation().regionFilter({
+    start: ['min', 'min'],
+    end: ['max', 0],
+    color: '#ff0000',
+  });
+  chart.annotation().dataMarker({
+    start: ['min', 0],
+    end: ['max', 'max'],
+    color: '#00ff00',
   });
   chart.data([]);
   chart.render();

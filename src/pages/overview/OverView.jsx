@@ -14,12 +14,12 @@ const OverView = (props) => {
         <div>
           <div>
             <span>$59,003,001</span>
-            <Icon type="pie" size={16} />
+            <Icon type="icon-piechart" size={16} />
           </div>
           <div>+0.04% ($22,262.86)</div>
         </div>
         <div>
-          <Icon type="add" size={24} />
+          <Icon type="icon-plus" size={16} />
           <span>购买加密货币</span>
         </div>
       </div>
